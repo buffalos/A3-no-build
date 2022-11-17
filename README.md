@@ -1,4 +1,4 @@
-#Assignment 3
+# Assignment 3
 Bahtija Durakovic, no build
 
 ## Getting Started with Create React App
