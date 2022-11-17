@@ -36,6 +36,7 @@ class App extends React.Component {
     })
 
     let accountBalance = creditSum - debitSum;
+    accountBalance = Math.round(accountBalance*1e2)/1e2;
     this.setState({debits, credits, accountBalance});
   }
 
@@ -91,7 +92,7 @@ class App extends React.Component {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/debits" element={<Debits addDebit={this.addDebit} debits={this.state.debits} />} />
-          <Route path="/credits" element={<Debits addCredit={this.addCredit} credits={this.state.credits} />} />
+          <Route path="/credits" element={<Credits addCredit={this.addCredit} credits={this.state.credits} />} />
         </Routes>
         <h3>{this.state.accountBalance}</h3>
       </div>
@@ -106,12 +107,11 @@ function Home() {
   return (
     <div>
       <h2>View your debits and credits!</h2>
-      <Link to="/debits">Debits</Link>
-      <Link to="/debits">Credits</Link>
+      <Link className='viewlink' to="/debits">Debits</Link>
+      <Link className='viewlink' to="/credits">Credits</Link>
     </div>
   );
 }
 
 
 export default App;
-
