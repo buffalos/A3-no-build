@@ -1,6 +1,6 @@
 # Assignment 3
 Bahtija Durakovic, no build
-
+Using React router, displays user bank information from API endpoints and calculates account balance.
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
